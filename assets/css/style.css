@@ -1,62 +1,378 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@50&display=swap');
 
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
 }
 
-/* Hero image */
+body {
 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    color: #3a3a3a;
+}
+
+/* Headings and logo */
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3a3a3a;
+}
+
+#times h2 {
+    font-size: 30px;
+    color: #fafafa;
+    opacity: .5;
+
+}
+h3{
+    font-weight: 50; 
+}
+
+#logo
+{
+    float: left;
+    font-size: 200%; 
+    margin-left: 20px;
+}
+
+/* Nav and links */
+
+#menu
+{ 
+font-size: 80%;
+letter-spacing: 4px;
+}
+
+#menu, #logo {
+    line-height: 75px;
+}
+
+#menu li{
+     float: right;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
     position: relative;
 }
 
+#cover-text, #cover-text h2 {
+
+    color: #fff;
+}
 
 #hero-image {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
 
-     /* Animation for hero image variables */
 
-     animation-name: hero-zoom;
-     animation-duration: 3s;
-     animation-fill-mode: forwards;
+/* Animates hero image on loading page */
+
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
 }
 
-#cover-text, #cover-text h2{
-    color: #fff;
-}
 
-/* animation keyframes; Hero-image zoom */
+/* Animation zoom of hero image */
 
 @keyframes hero-zoom {
     from {
-            transform: scale(1)
+        transform: scale(1);
     }
+
     to {
-            transform: scale(1.1)
+        transform: scale(1.1);
     }
 }
 
+
 #cover-text {
-    font-size: 130%;
-    font-family: Oswald, sans-serif;
+    
+    /* Styles the text of the div */
+    font-size: 80%;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
-
-    width; 300px;
+    
+    /* Styles the div */
+    width: 300px;
     height: 200px;
-
     padding-top: 40px;
-    padding-left: 10px;
-
-    background-color: rgba(241, 109, 107, .7);
+    padding-left: 40px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgba(240, 100, 100, .7);
 
     bottom: 30px;
-    right: 150px;
+    right: 30px;
 
     position: absolute;
+}
+
+
+/* Club ethos divs styling */
+
+#club-ethos {
+    height: 600px;
+    width: 100%;
+}
+
+#left-about{
+    padding-top: 30px;
+    width: 33%;
+    float: left;
+}
+
+#right-about {
+    padding-top: 30px;
+    width: 33%;
+    float: right;
+
+}
+
+#center-about {
+    width: 33%;
+    margin: 0 auto;
+}
+
+.left-about-heading {
+    width: 60%;
+    float: right;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px
+}
+
+.right-about-heading {
+    width: 60%;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px
+}
+
+.right-about-heading h2 {
+    text-align: right;
+}
+
+.right-about-heading p {
+    text-align: right;
+}
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+    width: 100%;
+}
+
+#welcome {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 200%;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#circle-container {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+
+#circle-cover-bg {
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Event times cards */
+#times {
+    background-image: url('../images/dublin-city.webp');
+    background-repeat: no-repeat;
+    background-position:  center;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+#times div {
+
+color: #fafafa;
+background-color:rgba(0, 0, 0, .7);
+width: 20%;
+height: 300px;
+float: left;
+
+padding: 30px 0 0 10px;
+text-align: center;
+
+border: 2px solid white;
+box-sizing: border-box;
+}
+
+.social {
+    text-align: center;
+}
+
+.social > li {
+    display: inline;
+    margin: 50px 20px 0 20px;
+    color: black;
+}
+
+.social i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+/* Gallery styling */
+
+#photos {
+    clear: both;
+    line-height: 0;
+    column-count: 4;
+    column-gap: 0;
+}
+
+#photos > img {
+    width: 100%;
+}
+
+
+/* Responsive code to accomodate different screen sizes */
+
+@media screen and (max-width: 1200px) {
+    #club-ethos {
+        width: 85%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0; 
+        margin: 0;
+    }
+
+    #left-about, #right-about {
+        width: 100%;
+        text-align: left;
+        clear: both;
+        padding: 0;
+    }
+
+    
+    #center-about {
+        text-align: center;
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+    
+    #times > div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+    
+    .right-about-heading h2, .left-about-heading h2 {
+        width: 90%;
+        /* text-align: center; */
+    }
+
+    .right-about-heading p, .left-about-heading p {
+        width: 90%;
+        /* text-align: center; */
+    }
+
+#times > div {
+    width: 100%;
+    clear: both;
+    height: 150px;
+    padding: 10px 0;
+}
+
+    hr {
+        display: none;
+    }
+
+}
+
+/* Responsive rules for medium screens below 950px */
+
+@media screen and (max-width: 950px) {
+
+    #menu {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading, .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2, .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;   
+    }
+    #photos {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #photos {
+        column-count: 2;
+    }
 }
